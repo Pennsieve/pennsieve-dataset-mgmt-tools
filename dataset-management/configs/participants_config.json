@@ -1,0 +1,33 @@
+{
+  "org_id": "N:organization:fecf73c8-b590-47fa-8de0-74cfb57051a2",
+  "template_id": "8b0f84a5-fb58-4c3f-a886-ad3498e55c5b",
+  "model_name": "pennepi_participants",
+  "display_name": "PennEPI Participants",
+
+  "sources": {
+    "participants": {
+      "type": "pennsieve",
+      "file_pattern": "participants.tsv"
+    }
+  },
+
+  "join_key": "participant_id",
+
+  "mappings": {
+    "participant_id": {"source": "participants", "column": "participant_id"},
+    "species": {"value": "homo sapiens"},
+    "population": {"source": "participants", "column": "population"},
+    "sex": {"source": "participants", "column": "sex"},
+    "MRI_lesion": {"source": "participants", "column": "MRI_lesion"},
+    "MRI_lesionType": {"source": "participants", "column": "MRI_lesionType"},
+    "MRI_lesionDetails": {"source": "participants", "column": "MRI_lesionDetails"},
+    "ieeg_isFocal": {"source": "participants", "column": "ieeg_isFocal"},
+    "fiveSenseScore": {"source": "participants", "column": "fiveSenseScore"},
+    "seizure_Engel12m": {"source": "participants", "column": "seizure_Engel12m"},
+    "seizure_Engel24m": {"source": "participants", "column": "seizure_Engel24m"},
+    "age_intervention": {"source": "participants", "column": "age_intervention"},
+    "intervention_type": {"source": "participants", "column": "intervention_type"},
+    "intervention_side": {"source": "participants", "column": "intervention_side"},
+    "intervention_location": {"source": "participants", "column": "intervention_location"}
+  }
+}

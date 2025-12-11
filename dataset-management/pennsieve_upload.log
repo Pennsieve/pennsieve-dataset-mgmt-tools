@@ -1,0 +1,217 @@
+2025-12-11 14:39:44,902 - ERROR - Dataset directory does not exist: /Users/ddefreitas/Documents/bids-data/Management Test Dataset
+2025-12-11 14:41:31,190 - INFO - Authenticating with Pennsieve...
+2025-12-11 14:41:31,818 - INFO - Authentication successful
+2025-12-11 14:41:32,201 - INFO - Uploading: dataset_description.json (133 bytes)
+2025-12-11 14:41:32,280 - INFO - Uploading: input.csv (0 bytes)
+2025-12-11 14:41:32,354 - INFO - Uploading: README (297 bytes)
+2025-12-11 14:41:32,422 - INFO - Uploading: sub-0001 (128 bytes)
+2025-12-11 14:41:32,491 - INFO - Uploading: dataset_description.json (133 bytes)
+2025-12-11 14:41:32,565 - INFO - Uploading: input.csv (0 bytes)
+2025-12-11 14:41:32,635 - INFO - Uploading: README (297 bytes)
+2025-12-11 14:41:32,718 - INFO - Uploading: sub-0001 (128 bytes)
+2025-12-11 14:48:38,978 - INFO - 
+============================================================
+2025-12-11 14:48:38,978 - INFO - Uploading to dataset: Management Test Dataset
+2025-12-11 14:48:38,978 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:48:38,978 - INFO - ============================================================
+2025-12-11 14:48:38,978 - INFO - Looking up dataset: Management Test Dataset
+2025-12-11 14:48:39,948 - ERROR - Could not parse node ID from output: Initializing DB...
++-----------------------------+
+| Datasets                    |
++------+---------+------------+
+| NAME | NODE ID | INTEGER ID |
++------+---------+------------+
++------+---------+------------+
+
+2025-12-11 14:48:39,949 - ERROR - Dataset not found: Management Test Dataset
+2025-12-11 14:48:39,949 - INFO - 
+============================================================
+2025-12-11 14:48:39,949 - INFO - Uploading to dataset: Management Test Dataset 2
+2025-12-11 14:48:39,949 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:48:39,949 - INFO - ============================================================
+2025-12-11 14:48:39,949 - INFO - Looking up dataset: Management Test Dataset 2
+2025-12-11 14:48:40,258 - ERROR - Could not parse node ID from output: Initializing DB...
++-----------------------------+
+| Datasets                    |
++------+---------+------------+
+| NAME | NODE ID | INTEGER ID |
++------+---------+------------+
++------+---------+------------+
+
+2025-12-11 14:48:40,258 - ERROR - Dataset not found: Management Test Dataset 2
+2025-12-11 14:48:40,259 - INFO - 
+============================================================
+2025-12-11 14:48:40,259 - INFO - SUMMARY
+2025-12-11 14:48:40,259 - INFO - ============================================================
+2025-12-11 14:48:40,259 - INFO - Datasets: 2
+2025-12-11 14:48:40,259 - INFO - Successful: 0
+2025-12-11 14:48:40,259 - INFO - Failed: 2
+2025-12-11 14:50:16,588 - INFO - 
+============================================================
+2025-12-11 14:50:16,589 - INFO - Uploading to dataset: Management Test Dataset
+2025-12-11 14:50:16,589 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:50:16,589 - INFO - ============================================================
+2025-12-11 14:50:16,589 - INFO - Looking up dataset: Management Test Dataset
+2025-12-11 14:50:17,116 - ERROR - Could not parse node ID from output: Initializing DB...
++-----------------------------+
+| Datasets                    |
++------+---------+------------+
+| NAME | NODE ID | INTEGER ID |
++------+---------+------------+
++------+---------+------------+
+
+2025-12-11 14:50:17,116 - ERROR - Dataset not found: Management Test Dataset
+2025-12-11 14:50:17,117 - INFO - 
+============================================================
+2025-12-11 14:50:17,117 - INFO - Uploading to dataset: Management Test Dataset 2
+2025-12-11 14:50:17,117 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:50:17,117 - INFO - ============================================================
+2025-12-11 14:50:17,117 - INFO - Looking up dataset: Management Test Dataset 2
+2025-12-11 14:50:17,474 - ERROR - Could not parse node ID from output: Initializing DB...
++-----------------------------+
+| Datasets                    |
++------+---------+------------+
+| NAME | NODE ID | INTEGER ID |
++------+---------+------------+
++------+---------+------------+
+
+2025-12-11 14:50:17,474 - ERROR - Dataset not found: Management Test Dataset 2
+2025-12-11 14:50:17,474 - INFO - 
+============================================================
+2025-12-11 14:50:17,475 - INFO - SUMMARY
+2025-12-11 14:50:17,475 - INFO - ============================================================
+2025-12-11 14:50:17,475 - INFO - Datasets: 2
+2025-12-11 14:50:17,475 - INFO - Successful: 0
+2025-12-11 14:50:17,475 - INFO - Failed: 2
+2025-12-11 14:50:44,156 - INFO - 
+============================================================
+2025-12-11 14:50:44,156 - INFO - Uploading to dataset: Management Test Dataset
+2025-12-11 14:50:44,156 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:50:44,156 - INFO - ============================================================
+2025-12-11 14:50:44,156 - INFO - Looking up dataset: Management Test Dataset
+2025-12-11 14:50:44,371 - INFO -   Found: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:50:44,371 - INFO - Setting active dataset: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:50:44,650 - INFO - Found 7 file(s) to upload
+2025-12-11 14:50:44,651 - INFO - Creating manifest for: /Users/ddefreitas/Documents/bids-data/README
+2025-12-11 14:50:44,781 - INFO -   Created manifest ID: 1
+2025-12-11 14:50:44,782 - INFO - Adding 6 additional file(s) to manifest...
+2025-12-11 14:50:44,854 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:50:44,854 - INFO - Uploading manifest: 1
+2025-12-11 14:50:52,159 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 96)
+Unsubscribing client ID 96
+
+2025-12-11 14:50:52,160 - INFO - Successfully uploaded manifest 1
+2025-12-11 14:50:52,160 - INFO - Successfully uploaded to Management Test Dataset
+2025-12-11 14:50:52,160 - INFO - 
+============================================================
+2025-12-11 14:50:52,160 - INFO - Uploading to dataset: Management Test Dataset 2
+2025-12-11 14:50:52,161 - INFO - Source: /Users/ddefreitas/Documents/bids-data
+2025-12-11 14:50:52,165 - INFO - ============================================================
+2025-12-11 14:50:52,166 - INFO - Looking up dataset: Management Test Dataset 2
+2025-12-11 14:50:52,392 - INFO -   Found: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:50:52,393 - INFO - Setting active dataset: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:50:52,728 - INFO - Found 7 file(s) to upload
+2025-12-11 14:50:52,728 - INFO - Creating manifest for: /Users/ddefreitas/Documents/bids-data/README
+2025-12-11 14:50:52,858 - INFO -   Created manifest ID: 2
+2025-12-11 14:50:52,858 - INFO - Adding 6 additional file(s) to manifest...
+2025-12-11 14:50:52,949 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:50:52,949 - INFO - Uploading manifest: 2
+2025-12-11 14:51:00,408 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 38)
+Unsubscribing client ID 38
+
+2025-12-11 14:51:00,409 - INFO - Successfully uploaded manifest 2
+2025-12-11 14:51:00,409 - INFO - Successfully uploaded to Management Test Dataset 2
+2025-12-11 14:51:00,409 - INFO - 
+============================================================
+2025-12-11 14:51:00,409 - INFO - SUMMARY
+2025-12-11 14:51:00,410 - INFO - ============================================================
+2025-12-11 14:51:00,410 - INFO - Datasets: 2
+2025-12-11 14:51:00,410 - INFO - Successful: 2
+2025-12-11 14:51:00,410 - INFO - Failed: 0
+2025-12-11 14:52:40,353 - INFO - 
+============================================================
+2025-12-11 14:52:40,353 - INFO - Uploading to dataset: Management Test Dataset
+2025-12-11 14:52:40,353 - INFO - Source: /Users/ddefreitas/Documents/67a8d967-f1f5-435d-a3b5-a325e29e46a1.jpg
+2025-12-11 14:52:40,353 - INFO - ============================================================
+2025-12-11 14:52:40,353 - INFO - Looking up dataset: Management Test Dataset
+2025-12-11 14:52:40,590 - INFO -   Found: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:52:40,590 - INFO - Setting active dataset: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:52:40,964 - INFO - Found 1 file(s) to upload
+2025-12-11 14:52:40,965 - INFO - Creating manifest for: /Users/ddefreitas/Documents/67a8d967-f1f5-435d-a3b5-a325e29e46a1.jpg
+2025-12-11 14:52:41,114 - INFO -   Created manifest ID: 3
+2025-12-11 14:52:41,114 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:52:41,114 - INFO - Uploading manifest: 3
+2025-12-11 14:52:42,452 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 99)
+Unsubscribing client ID 99
+
+2025-12-11 14:52:42,453 - INFO - Successfully uploaded manifest 3
+2025-12-11 14:52:42,453 - INFO - Successfully uploaded to Management Test Dataset
+2025-12-11 14:52:42,453 - INFO - 
+============================================================
+2025-12-11 14:52:42,453 - INFO - Uploading to dataset: Management Test Dataset 2
+2025-12-11 14:52:42,453 - INFO - Source: /Users/ddefreitas/Documents/67a8d967-f1f5-435d-a3b5-a325e29e46a1.jpg
+2025-12-11 14:52:42,453 - INFO - ============================================================
+2025-12-11 14:52:42,453 - INFO - Looking up dataset: Management Test Dataset 2
+2025-12-11 14:52:42,689 - INFO -   Found: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:52:42,689 - INFO - Setting active dataset: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:52:42,989 - INFO - Found 1 file(s) to upload
+2025-12-11 14:52:42,989 - INFO - Creating manifest for: /Users/ddefreitas/Documents/67a8d967-f1f5-435d-a3b5-a325e29e46a1.jpg
+2025-12-11 14:52:43,110 - INFO -   Created manifest ID: 4
+2025-12-11 14:52:43,110 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:52:43,110 - INFO - Uploading manifest: 4
+2025-12-11 14:52:44,045 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 73)
+Unsubscribing client ID 73
+
+2025-12-11 14:52:44,045 - INFO - Successfully uploaded manifest 4
+2025-12-11 14:52:44,045 - INFO - Successfully uploaded to Management Test Dataset 2
+2025-12-11 14:52:44,045 - INFO - 
+============================================================
+2025-12-11 14:52:44,045 - INFO - SUMMARY
+2025-12-11 14:52:44,045 - INFO - ============================================================
+2025-12-11 14:52:44,045 - INFO - Datasets: 2
+2025-12-11 14:52:44,046 - INFO - Successful: 2
+2025-12-11 14:52:44,046 - INFO - Failed: 0
+2025-12-11 14:55:49,136 - INFO - Found 2 dataset folder(s)
+2025-12-11 14:55:49,137 - INFO - 
+============================================================
+2025-12-11 14:55:49,137 - INFO - Uploading to dataset: Management Test Dataset
+2025-12-11 14:55:49,137 - INFO - Source: /Users/ddefreitas/Documents/bids-data/Management Test Dataset
+2025-12-11 14:55:49,138 - INFO - ============================================================
+2025-12-11 14:55:49,138 - INFO - Looking up dataset: Management Test Dataset
+2025-12-11 14:55:49,381 - INFO -   Found: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:55:49,381 - INFO - Setting active dataset: N:dataset:c1dfee34-6b69-4d63-8fa3-84c4ddf1428f
+2025-12-11 14:55:49,708 - INFO - Found 1 file(s) to upload
+2025-12-11 14:55:49,708 - INFO - Creating manifest for: /Users/ddefreitas/Documents/bids-data/Management Test Dataset/hello.txt
+2025-12-11 14:55:49,823 - INFO -   Created manifest ID: 5
+2025-12-11 14:55:49,824 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:55:49,824 - INFO - Uploading manifest: 5
+2025-12-11 14:55:51,405 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 38)
+Unsubscribing client ID 38
+
+2025-12-11 14:55:51,405 - INFO - Successfully uploaded manifest 5
+2025-12-11 14:55:51,406 - INFO - Successfully uploaded to Management Test Dataset
+2025-12-11 14:55:51,406 - INFO - 
+============================================================
+2025-12-11 14:55:51,406 - INFO - Uploading to dataset: Management Test Dataset 2
+2025-12-11 14:55:51,406 - INFO - Source: /Users/ddefreitas/Documents/bids-data/Management Test Dataset 2
+2025-12-11 14:55:51,406 - INFO - ============================================================
+2025-12-11 14:55:51,406 - INFO - Looking up dataset: Management Test Dataset 2
+2025-12-11 14:55:51,631 - INFO -   Found: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:55:51,632 - INFO - Setting active dataset: N:dataset:dededaf4-f5e3-48f2-b9c2-b9001a143b29
+2025-12-11 14:55:51,915 - INFO - Found 1 file(s) to upload
+2025-12-11 14:55:51,915 - INFO - Creating manifest for: /Users/ddefreitas/Documents/bids-data/Management Test Dataset 2/world.txt
+2025-12-11 14:55:52,021 - INFO -   Created manifest ID: 6
+2025-12-11 14:55:52,021 - INFO - NOTE: Pennsieve does not overwrite files. Duplicates may be created.
+2025-12-11 14:55:52,021 - INFO - Uploading manifest: 6
+2025-12-11 14:55:53,180 - INFO - Upload output: Subscribing to updates from Pennsieve Agent (id: 66)
+Unsubscribing client ID 66
+
+2025-12-11 14:55:53,181 - INFO - Successfully uploaded manifest 6
+2025-12-11 14:55:53,181 - INFO - Successfully uploaded to Management Test Dataset 2
+2025-12-11 14:55:53,181 - INFO - 
+============================================================
+2025-12-11 14:55:53,181 - INFO - SUMMARY
+2025-12-11 14:55:53,181 - INFO - ============================================================
+2025-12-11 14:55:53,181 - INFO - Total datasets: 2
+2025-12-11 14:55:53,181 - INFO - Successful: 2
+2025-12-11 14:55:53,181 - INFO - Failed: 0

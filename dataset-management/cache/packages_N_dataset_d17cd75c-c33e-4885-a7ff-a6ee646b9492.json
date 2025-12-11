@@ -1,0 +1,339 @@
+[
+  {
+    "content": {
+      "id": 1713575,
+      "name": "primary",
+      "packageType": "Collection",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "createdAt": "2025-12-11T20:24:21.68721Z",
+      "updatedAt": "2025-12-11T20:24:21.68721Z",
+      "nodeId": "N:collection:8cb4fe2a-423f-4917-9626-93b1dcd9cf96"
+    },
+    "properties": [],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713576,
+      "name": "sub-PennEPI00212",
+      "packageType": "Collection",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713575,
+      "createdAt": "2025-12-11T20:24:21.699868Z",
+      "updatedAt": "2025-12-11T20:24:21.699868Z",
+      "nodeId": "N:collection:a34d8043-97f5-44d3-add9-ffebe573b824"
+    },
+    "properties": [],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713577,
+      "name": "ses-postimplant",
+      "packageType": "Collection",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713576,
+      "createdAt": "2025-12-11T20:24:21.710501Z",
+      "updatedAt": "2025-12-11T20:24:21.710501Z",
+      "nodeId": "N:collection:7e6b79bf-3192-4f55-ae2f-7214d7da7cb2"
+    },
+    "properties": [],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713578,
+      "name": "ieeg",
+      "packageType": "Collection",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713577,
+      "createdAt": "2025-12-11T20:24:21.720679Z",
+      "updatedAt": "2025-12-11T20:24:21.720679Z",
+      "nodeId": "N:collection:03ed100b-fde0-4036-a2f1-9f280418a664"
+    },
+    "properties": [],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713579,
+      "name": "sub-PennEPI00212_sessions.tsv",
+      "packageType": "CSV",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713576,
+      "createdAt": "2025-12-11T20:24:21.738219Z",
+      "updatedAt": "2025-12-11T20:24:21.738219Z",
+      "nodeId": "N:package:6cb275e8-3ede-4a3e-a706-be91b4dbb423"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          },
+          {
+            "key": "icon",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713580,
+      "name": "sub-PennEPI00212_ses-postimplant_space-MNI152NLin6ASym_coordsystem.json",
+      "packageType": "Unsupported",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713578,
+      "createdAt": "2025-12-11T20:24:21.748957Z",
+      "updatedAt": "2025-12-11T20:24:21.748957Z",
+      "nodeId": "N:package:eb399c23-6f3a-4abd-a2ad-b669702893c7"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          },
+          {
+            "key": "icon",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713581,
+      "name": "sub-PennEPI00212_ses-postimplant_task-clinical_ieeg.json",
+      "packageType": "Unsupported",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713578,
+      "createdAt": "2025-12-11T20:24:21.748957Z",
+      "updatedAt": "2025-12-11T20:24:21.748957Z",
+      "nodeId": "N:package:3b0502fc-e5ed-4e38-8431-e3f96e7d480d"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          },
+          {
+            "key": "icon",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713582,
+      "name": "sub-PennEPI00212_ses-postimplant_task-clinical_channels.tsv",
+      "packageType": "CSV",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "parentId": 1713578,
+      "createdAt": "2025-12-11T20:24:21.748957Z",
+      "updatedAt": "2025-12-11T20:24:21.748957Z",
+      "nodeId": "N:package:bfdcd947-0010-4cd2-b491-b67b99039b9a"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          },
+          {
+            "key": "icon",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713583,
+      "name": "dataset_description.json",
+      "packageType": "Unsupported",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "createdAt": "2025-12-11T20:24:21.759906Z",
+      "updatedAt": "2025-12-11T20:24:21.759906Z",
+      "nodeId": "N:package:2a9a8f76-7501-491b-8e95-2eef5802777c"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          },
+          {
+            "key": "icon",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713584,
+      "name": "participants.tsv",
+      "packageType": "CSV",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "createdAt": "2025-12-11T20:24:22.133737Z",
+      "updatedAt": "2025-12-11T20:24:22.133737Z",
+      "nodeId": "N:package:25995b3b-e351-45d8-adc9-e3c52f1e1f20"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          },
+          {
+            "key": "icon",
+            "value": "Tabular",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "Tabular"
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  {
+    "content": {
+      "id": 1713585,
+      "name": "participants.json",
+      "packageType": "Unsupported",
+      "datasetId": 517,
+      "datasetNodeId": "N:dataset:d17cd75c-c33e-4885-a7ff-a6ee646b9492",
+      "ownerId": 1350,
+      "state": "READY",
+      "createdAt": "2025-12-11T20:24:22.133737Z",
+      "updatedAt": "2025-12-11T20:24:22.133737Z",
+      "nodeId": "N:package:9ccaa386-95c1-4d04-a26e-1e843b412c09"
+    },
+    "properties": [
+      {
+        "category": "Pennsieve",
+        "properties": [
+          {
+            "key": "subtype",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          },
+          {
+            "key": "icon",
+            "value": "JSON",
+            "dataType": "string",
+            "fixed": false,
+            "hidden": true,
+            "display": "JSON"
+          }
+        ]
+      }
+    ],
+    "children": []
+  }
+]
