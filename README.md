@@ -424,7 +424,28 @@ python model_populator.py --api-key <KEY> --api-secret <SECRET> \
 python model_populator.py --api-key <KEY> --api-secret <SECRET> \
     --config configs/participants_config.json \
     --prefix PennEPI
+
+# Force fresh data (bypass cache)
+python model_populator.py --api-key <KEY> --api-secret <SECRET> \
+    --config configs/participants_config.json \
+    --datasets "My Dataset" \
+    --force-reload
 ```
+
+### Options
+
+| Flag | Description |
+|------|-------------|
+| `--config` | Path to config JSON file |
+| `--datasets` | Dataset name(s) to process |
+| `--prefix` | Process all datasets matching this prefix |
+| `--dry-run` | Preview changes without creating records |
+| `--force-reload` | Bypass cache and fetch fresh package data from API |
+| `--verbose` | Enable debug logging |
+| `--generate-config` | Generate a starter config from a template |
+| `--output` | Output path for generated config |
+
+**Note:** Package data is cached locally. If you've recently uploaded or deleted files, use `--force-reload` to ensure you're working with the latest data.
 
 ### Validation Behavior
 

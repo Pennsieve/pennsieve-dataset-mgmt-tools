@@ -277,10 +277,23 @@ class ModelPopulator:
 
         return None
 
-    def download_file_content(self, node_id: str) -> str:
-        """Download file content from Pennsieve."""
+    def download_file_content(self, node_id: str, package_id: str = None) -> str:
+        """Download file content from Pennsieve.
+
+        Uses the download-manifest endpoint with Bearer token authentication
+        (matching the working implementation in migrationtools).
+
+        Args:
+            node_id: The nodeId of the package
+            package_id: The id of the package (not currently used, kept for API compatibility)
+        """
+        self._debug(f"Downloading file: nodeId={node_id}")
+
         manifest_url = f"{API_HOST}/packages/download-manifest"
         payload = {"nodeIds": [node_id]}
+
+        self._debug(f"POST {manifest_url}")
+        self._debug(f"Payload: {payload}")
 
         response = requests.post(
             manifest_url,
@@ -298,6 +311,7 @@ class ModelPopulator:
         if not download_url:
             raise ValueError("Manifest response missing 'url' key")
 
+        self._debug(f"Downloading from presigned URL...")
         file_response = requests.get(download_url)
         file_response.raise_for_status()
 
@@ -530,6 +544,49 @@ class ModelPopulator:
 
         return None
 
+    def delete_model_records(self, model_id: str, dataset_id: str) -> bool:
+        """Delete all records from a model."""
+        encoded_id = quote(dataset_id, safe="")
+
+        # First, get all records
+        url = f"{API2_BASE_URL}/metadata/models/{model_id}/records?dataset_id={encoded_id}&limit=1000"
+        response = requests.get(url, headers=self.auth.get_headers())
+
+        if not response.ok:
+            self._debug(f"Failed to get records: {response.status_code}")
+            return False
+
+        records = response.json()
+        if not records:
+            self._debug("No existing records to delete")
+            return True
+
+        # Extract record IDs
+        record_ids = [r.get("id") for r in records if r.get("id")]
+        if not record_ids:
+            return True
+
+        self._log(f"Deleting {len(record_ids)} existing records...", indent=2)
+
+        if self.dry_run:
+            self._log(f"[DRY-RUN] Would delete {len(record_ids)} records", indent=2)
+            return True
+
+        # Delete records
+        delete_url = f"{API2_BASE_URL}/metadata/models/{model_id}/records?dataset_id={encoded_id}"
+        delete_response = requests.delete(
+            delete_url,
+            json=record_ids,
+            headers=self.auth.get_headers()
+        )
+
+        if not delete_response.ok:
+            self._log(f"WARNING: Failed to delete records: {delete_response.status_code}", indent=2)
+            return False
+
+        self._log(f"Deleted {len(record_ids)} records", indent=2)
+        return True
+
     def create_model_from_template(
         self,
         template_id: str,
@@ -538,7 +595,17 @@ class ModelPopulator:
         display_name: str,
         description: str = ""
     ) -> Optional[str]:
-        """Create a model from template."""
+        """Create a model from template, or reuse existing model with same name."""
+
+        # First, check if model already exists
+        existing_model_id = self.get_existing_model(dataset_id, model_name)
+        if existing_model_id:
+            self._log(f"Model '{model_name}' already exists, reusing it", indent=2)
+            # Clear existing records so we can repopulate
+            self.delete_model_records(existing_model_id, dataset_id)
+            return existing_model_id
+
+        # Create new model
         encoded_id = quote(dataset_id, safe="")
         url = f"{API2_BASE_URL}/metadata/templates/{template_id}/models?dataset_id={encoded_id}&version=1"
 
@@ -556,17 +623,6 @@ class ModelPopulator:
             return "dry-run-model-id"
 
         response = requests.post(url, json=payload, headers=self.auth.get_headers())
-
-        # Handle duplicate model
-        if response.status_code == 400:
-            try:
-                error = response.json()
-                if "duplicate model name" in error.get("message", ""):
-                    self._log("Model already exists, using existing...")
-                    return self.get_existing_model(dataset_id, model_name)
-            except json.JSONDecodeError:
-                pass
-
         response.raise_for_status()
 
         result = response.json()
@@ -662,11 +718,13 @@ class ModelPopulator:
                     continue
 
                 node_id = pkg.get("content", {}).get("nodeId")
+                package_id = pkg.get("content", {}).get("id")
                 filename = pkg.get("content", {}).get("name")
                 self._log(f"Found {source_name}: {filename}", indent=2)
+                self._debug(f"nodeId: {node_id}, packageId: {package_id}", indent=3)
 
                 if not self.dry_run:
-                    content = self.download_file_content(node_id)
+                    content = self.download_file_content(node_id, package_id)
                     records = self._parse_file_content(content, filename)
                     source_data[source_name] = records
                     self._log(f"Loaded {len(records)} records from {source_name}", indent=3)
