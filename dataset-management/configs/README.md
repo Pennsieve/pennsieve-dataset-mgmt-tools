@@ -75,6 +75,26 @@ This folder contains configuration files for `model_populator.py`. Each config d
 "species": {"value": "homo sapiens"}
 ```
 
+## Record Key Field
+
+Each template defines a **key field** (marked with `x-pennsieve-key: true` in the schema) that uniquely identifies records. The populator auto-detects this field.
+
+You must include a mapping for the key field to specify where its value comes from:
+
+```json
+"mappings": {
+  "participant_id": {"source": "participants", "column": "participant_id"},
+  ...
+}
+```
+
+If your source column has a different name than the key field:
+
+```json
+// Template key field is "participant_id", but source column is "subject_id"
+"participant_id": {"source": "participants", "column": "subject_id"}
+```
+
 ## Generating a Config
 
 Generate a starter config from a template schema:

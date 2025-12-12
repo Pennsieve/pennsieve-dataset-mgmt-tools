@@ -400,6 +400,34 @@ python model_populator.py --api-key <KEY> --api-secret <SECRET> \
 - `{"source": "name", "column": "col"}` - Get value from a source file column
 - `{"value": "static"}` - Use a static value for all records
 
+### Record Key Field
+
+Each model has a **key field** that uniquely identifies records. The key field is defined in the template schema (marked with `x-pennsieve-key: true`) and is automatically detected by the populator.
+
+You must map this key field in your config to specify where the value comes from:
+
+```json
+"mappings": {
+  "participant_id": {"source": "participants", "column": "participant_id"},
+  ...
+}
+```
+
+If your source file uses a different column name, map it accordingly:
+
+```json
+// Template expects "participant_id", but your file has "subject_id" column
+"participant_id": {"source": "participants", "column": "subject_id"}
+```
+
+### Re-running the Populator
+
+The populator is **idempotent** - you can safely run it multiple times on the same dataset:
+
+- If the model already exists, it will be reused (not recreated)
+- Existing records are deleted before new records are added
+- This ensures you always get a clean, up-to-date model
+
 ### Populate a Model
 
 ```bash
